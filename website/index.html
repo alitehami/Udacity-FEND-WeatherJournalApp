@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Weather Journal</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <div class="holder headline">
+        Weather Journal App
+      </div>
+      <div class="holder zip">
+        <label for="country">Select A Country</label>
+        <select name="Country" id="country"></select>
+        <label for="zip">Enter Zipcode here</label>
+        <input type="text" id="zip" placeholder="enter zip code here" />
+        <label for="units">Units:</label>
+        <label for="metric">
+          <input type="radio" id="metric" name="units" value="metric" checked />
+          Metric</label
+        >
+        <label for="imperial">
+          <input type="radio" id="imperial" name="units" value="imperial" />
+          Imperial</label
+        >
+      </div>
+      <div class="holder feel">
+        <label for="feelings">How are you feeling today?</label>
+        <textarea
+          class="myInput"
+          id="feelings"
+          placeholder="Enter your feelings here"
+          rows="9"
+          cols="50"
+        ></textarea>
+        <button id="generate" type="submit">Generate</button>
+      </div>
+      <div class="holder map">
+        <!-- <iframe src="https://www.openstreetmap.org/export/embed.html?#map=12/-37.8600/145.0200" frameborder="0"></iframe> -->
+
+        <iframe
+          id="map"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=144.9605%2C-37.8101%2C144.9605%2C-37.8101&amp;layer=mapnik&amp;marker=-37.81005519477106%2C144.96047973632812"
+        ></iframe>
+      </div>
+      <div class="holder entry">
+        <div class="title">Most Recent Entry</div>
+        <div id="entryHolder">
+          <div id="date"></div>
+          <div id="temp"></div>
+          <div id="content"></div>
+        </div>
+      </div>
+    </div>
+    <script src="app.js" type="text/javascript"></script>
+  </body>
+  <footer>
+    <div>
+      Country Codes Scrapped from
+      <a href="https://www.iban.com/country-codes" target="_blank">
+        iban.com/country-codes</a
+      >
+    </div>
+    <div>
+      Weather Data kindly obtained from
+      <a href="https://openweathermap.org/" target="_blank"
+        >openweathermap.org</a
+      >
+    </div>
+    <div>
+      Map provided through
+      <a href="https://openstreetmap.org" target="_blank">openstreetmap.org</a>
+    </div>
+    <a href="https://www.linkedin.com/in/alitehami/" target="_blank"
+      >&COPY; Ali Tehami 2020</a
+    >
+  </footer>
+</html>
